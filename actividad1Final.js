@@ -29,43 +29,29 @@ let media = sumaElementos / 10;
 console.log(`La media aritmetica del array equivale a: ${media}`);
 
 console.log(`------------------------Requerimiento 2--------------------------`);
+//Creamos el array con el que vamos a trabajar
+let array = [25,17,40,63,25,54,70,90]
 
-//creamos los dos arrays con los que operaremos
-let b = new Array(6);
-let c = new Array(5);
-b = [8, 2, 56, 80, 12, 1];
-c = [8, 2, 56, 80, 12];
 
-//console.log(b.sort());
-//console.log(`El array par ordenado es: ${b.sort((n1, n2) => n1 - n2)} y el array impar ordenado es: ${c.sort((n1, n2) => n1 - n2)} `);
-//creamos una función que recibirá por parámetro un array
-function mediana(arr) {
-    //variable que almacenará el array ordenado de menor a mayor
-    let arra = arr.sort((n1, n2) => n1 - n2);
-    //si el array es impar entonces quitamos un elemento del principio y otro del final hasta que quede 1 que será la mediana
-    if ((arra.length) % 2 !== 0) {
-        while (arra.length > 1) {
-            arra.shift();
-            arra.pop();
-        }
-        console.log(`La mediana del array es: ${arra[0]} `)
-        //si el array es par entonces quitamos un elemento del principio y otro del final hasta que queden 2
-        //para sacar la mediana en este caso se suman los dos elementos que han quedado en array y se divide entre 2
-    } else {
-        while (arra.length > 2) {
-            arra.shift();
-            arra.pop();
-        }
-        let sum = 0;
-        arra.forEach(element => {
-            sum += element;
-        });
-        console.log(`La mediana del array es: ${sum / 2}`)
-    }
+//Creamos una función para la mediana
+
+function mediana(array) {
+
+    //mediana: variable donde vamos a devolver el resultado de la mediana
+    let mediana = 0
+
+    //Ordenamos el array de menor a mayor
+    array.sort((a, b) => a - b)
+
+    //Calculamos la mediana: 
+    //1. Si el array tiene un numero impar de elementos, entonces la mediana es el numero que esta en el medio del array(ej: si el array tiene 3 posiciones, la mediana es la posicion 1). Usamos Math.floor para redondear hacia abajo cuando dividimos la longitud del array ya que al ser un numero impar va a dar decimal (ej: si el array tiene 3 posiciones, 3/2= 1.5 que redondeado hacia abajo es 1, la posicion que queremos)
+
+    //2. Si el array tiene un numero par de elementos, entonces la mediana es la media de los dos elementos del medio (ej: si el array tiene 4 posiciones, la mediana es la media de las posiciones 1 y 2) 
+    array.length % 2 != 0 ? mediana = array[Math.floor(array.length / 2)] : mediana = (array[array.length / 2] + array[array.length / 2 - 1]) / 2
+    
+    //Devolvemos el resultado 
+    return mediana;
 }
-
-mediana(b);
-mediana(c);
 
 console.log(`-----------------------Requerimiento 3------------------------`);
 
