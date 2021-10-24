@@ -339,7 +339,8 @@ function cargarFormulario() {
     let styleForm = document.getElementById("formulario")
     
     css(body, {
-        'margin': '20px'
+        'margin': '20px',
+        'font-family': 'Arial'
     });
     css(titulo, {
         'text-align': 'center',
@@ -347,13 +348,15 @@ function cargarFormulario() {
     });
     
     css(formulario, {
-        'background-color': '#b3aeada4',
-        'padding':'10px 10px 10px 10px'
+        'background-color': 'lightblue',
+        'padding': '10px 10px 10px 10px',
+        'box-shadow':'3px 5px grey'
     });
 
     css(div2, {
-        'background-color': '#b3aeada4',
+        'background-color': 'lightblue',
         'text-align': 'center',
+        'box-shadow':'3px 5px grey'
 
     });
 
