@@ -338,6 +338,9 @@ function cargarFormulario() {
 
     let styleForm = document.getElementById("formulario")
     
+    css(body, {
+        'margin': '20px'
+    });
     css(titulo, {
         'text-align': 'center',
         'border':'solid 3px #b3aeada4'
