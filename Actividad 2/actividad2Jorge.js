@@ -165,6 +165,65 @@ function cargarFormulario() {
     const espacio3 = document.createElement("br")
     formulario.appendChild(espacio3)
 
+    const espacio4 = document.createElement("br")
+    formulario.appendChild(espacio4)
+
+    //label para select
+    const labelOpcion9 = document.createElement("label")
+    const textoLabelOpcion9 = document.createTextNode("Seleccione donde quiere reservar:")
+    labelOpcion9.setAttribute("for", "reservar")
+    labelOpcion9.appendChild(textoLabelOpcion9)
+    formulario.appendChild(labelOpcion9)
+
+    //Select
+    let reservar = document.createElement("select")
+    reservar.name = "reservar"
+    let option1 = document.createElement("option")
+    option1.value = "Sala_Fitness"
+    let option2 = document.createElement("option")
+    option2.value = "Sauna"
+    let option3 = document.createElement("option")
+    option2.value = "Piscina"
+
+    let text1 = document.createTextNode("Sala Fitness")
+    let text2 = document.createTextNode("Sauna")
+    let text3 = document.createTextNode("Piscina")
+
+    option1.appendChild(text1)
+    option2.appendChild(text2)
+    option3.appendChild(text3)
+
+    reservar.appendChild(option1)
+    reservar.appendChild(option2)
+    reservar.appendChild(option3)
+
+    let br = document.createElement("br")
+    formulario.appendChild(br)
+    formulario.appendChild(reservar)
+
+    const espacio5 = document.createElement("br")
+    formulario.appendChild(espacio5)
+    const espacio6 = document.createElement("br")
+    formulario.appendChild(espacio6)
+
+    //Label para textarea
+    const labelOpcion10 = document.createElement("label")
+    const textoLabelOpcion10 = document.createTextNode("Introduzca alguna sugerencia:")
+    labelOpcion10.setAttribute("for", "sugerencia")
+    labelOpcion10.appendChild(textoLabelOpcion10)
+    formulario.appendChild(labelOpcion10)
+    const espacio7 = document.createElement("br")
+    formulario.appendChild(espacio7)
+    //TextArea
+    let textarea = document.createElement("textarea")
+    textarea.name = "sugerencia"
+    textarea.cols = "50"
+    textarea.rows = "10"
+    formulario.appendChild(textarea)
+    const espacio8 = document.createElement("br")
+    formulario.appendChild(espacio8)
+
+
     //boton enviar
     const enviar = document.createElement("input")
     enviar.setAttribute("type", "submit")
@@ -178,6 +237,10 @@ function cargarFormulario() {
     validar.setAttribute("id", "validar")
     validar.setAttribute("value", "Validar")
     formulario.appendChild(validar)
+
+
+
+    
 
     function css(element, style) {
         for (const property in style)
