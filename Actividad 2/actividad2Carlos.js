@@ -1,19 +1,27 @@
-function cargar() {
+function cargarFormulario() {
     let foto = document.createElement("img");
-    foto.id = "pesa"
-    foto.src = "pesa.jpg"
-    foto.alt = "foto de una pesa"
+    foto.id = "piscina"
+    foto.src = "imagenes/piscina.jpg"
+    foto.alt = "foto de una piscina"
     foto.height = "300"
     foto.width = "450"
-    divInicio.appendChild(foto)
+    divInicial.appendChild(foto)
 
     let foto2 = document.createElement("img");
     foto2.id = "pesa2"
-    foto2.src = "bici.jpg"
-    foto2.alt = "foto de una bici"
+    foto2.src = "imagenes/sala.jpg"
+    foto2.alt = "foto de una sala"
     foto2.height = "300"
     foto2.width = "450"
-    divInicio.appendChild(foto2)
+    divInicial.appendChild(foto2)
+
+    let foto3 = document.createElement("img");
+    foto3.id = "pesa2"
+    foto3.src = "imagenes/sauna.jpg"
+    foto3.alt = "foto de una sauna"
+    foto3.height = "300"
+    foto3.width = "450"
+    divInicial.appendChild(foto3)
 
     let select = document.createElement("select")
     select.name = "reservar"
@@ -37,8 +45,8 @@ function cargar() {
     select.appendChild(option3)
 
     let br = document.createElement("br")
-    divInicio.appendChild(br)
-    divInicio.appendChild(select)
+    divInicial.appendChild(br)
+    divInicial.appendChild(select)
 
     function css(element, style) {
         for (const property in style)
@@ -47,7 +55,7 @@ function cargar() {
 
  
 
-    css(divInicio, {
+    css(divInicial, {
         'margin': '1%',
         'height': '100vh',
         'text-align': 'center',
