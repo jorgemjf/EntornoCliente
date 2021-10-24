@@ -270,6 +270,97 @@ function cargarFormulario() {
     const espacio6 = document.createElement("br")
     formulario.appendChild(espacio6)
 
+    //Checkbox
+    const checkbox = document.createElement("h3")
+    const textocheckbox = document.createTextNode("Actividades favoritas:")
+    checkbox.appendChild(textocheckbox)
+    formulario.appendChild(checkbox)
+
+    // Label para la primera opción (5a del general).
+
+    const labelOpcion11 = document.createElement("label")
+    const textoLabelOpcion11 = document.createTextNode("Body Combat")
+    labelOpcion11.setAttribute("for", "Body Combat")
+    labelOpcion11.appendChild(textoLabelOpcion11)
+    formulario.appendChild(labelOpcion11)
+
+    // Parámetro de entrada para la primera opción (5a del general).
+
+    const checkbox2 = document.createElement("input")
+    checkbox2.setAttribute("type", "Checkbox")
+    checkbox2.setAttribute("id", "Body Combat")
+    checkbox2.setAttribute("value", "Body Combat")
+    formulario.appendChild(checkbox2)
+
+    // Label para la segunda opción (6a del general).
+
+    const labelOpcion13 = document.createElement("label")
+    const textoLabelOpcion13 = document.createTextNode("Body Pump")
+    labelOpcion13.setAttribute("for", "Body Pump")
+    labelOpcion13.appendChild(textoLabelOpcion13)
+    formulario.appendChild(labelOpcion13)
+
+    // Parámetro de entrada para la segunda opción (6a del general).
+
+    const checkbox3 = document.createElement("input")
+    checkbox3.setAttribute("type", "Checkbox")
+    checkbox3.setAttribute("id", "Body Pump")
+    checkbox3.setAttribute("value", "Body Pump")
+    formulario.appendChild(checkbox3)
+
+    // Label para la tercera opción (7a del general).
+
+    const labelOpcion14 = document.createElement("label")
+    const textoLabelOpcion14 = document.createTextNode("Yoga")
+    labelOpcion14.setAttribute("for", "Yoga")
+    labelOpcion14.appendChild(textoLabelOpcion14)
+    formulario.appendChild(labelOpcion14)
+
+    // Parámetro de entrada para la tercera opción (7a del general).
+
+    const checkbox4 = document.createElement("input")
+    checkbox4.setAttribute("type", "Checkbox")
+    checkbox4.setAttribute("id", "Yoga")
+    checkbox4.setAttribute("value", "Yoga")
+    formulario.appendChild(checkbox4)
+
+    // Label para la cuarta opción (8a del general).
+
+    const labelOpcion15 = document.createElement("label")
+    const textoLabelOpcion15 = document.createTextNode("Pilates")
+    labelOpcion15.setAttribute("for", "Pilates")
+    labelOpcion15.appendChild(textoLabelOpcion15)
+    formulario.appendChild(labelOpcion15)
+
+    // Parámetro de entrada para la cuarta opción (8a del general).
+
+    const checkbox5 = document.createElement("input")
+    checkbox5.setAttribute("type", "Checkbox")
+    checkbox5.setAttribute("id", "Pilates")
+    checkbox5.setAttribute("value", "Pilates")
+    formulario.appendChild(checkbox5)
+
+    // Label para la quinta opción (9a del general).
+
+    const labelOpcion16 = document.createElement("label")
+    const textoLabelOpcion16 = document.createTextNode("Zumba")
+    labelOpcion16.setAttribute("for", "Zumba")
+    labelOpcion16.appendChild(textoLabelOpcion16)
+    formulario.appendChild(labelOpcion16)
+
+    // Parámetro de entrada para la quinta opción (9a del general).
+
+    const checkbox6 = document.createElement("input")
+    checkbox6.setAttribute("type", "Checkbox")
+    checkbox6.setAttribute("id", "Zumba")
+    checkbox6.setAttribute("value", "Zumba")
+    formulario.appendChild(checkbox6)
+    
+    const espacio9 = document.createElement("br")
+    formulario.appendChild(espacio9)
+    const espacio10 = document.createElement("br")
+    formulario.appendChild(espacio10)
+
     //Label para textarea
     const labelOpcion10 = document.createElement("label")
     const textoLabelOpcion10 = document.createTextNode("Añada alguna observación:")
@@ -284,8 +375,8 @@ function cargarFormulario() {
     textarea.cols = "50"
     textarea.rows = "10"
     formulario.appendChild(textarea)
-    const espacio8 = document.createElement("br")
-    formulario.appendChild(espacio8)
+    const espacio11 = document.createElement("br")
+    formulario.appendChild(espacio11)
 
 
     //boton enviar
