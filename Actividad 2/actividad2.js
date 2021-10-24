@@ -337,13 +337,21 @@ function cargarFormulario() {
     }
 
     let styleForm = document.getElementById("formulario")
+    
+    css(titulo, {
+        'text-align': 'center',
+        'border':'solid 3px #b3aeada4'
+    });
+    
     css(formulario, {
-        'background-color': 'yellow',
-        'color': 'red'
+        'background-color': '#b3aeada4',
+        'padding':'10px 10px 10px 10px'
     });
 
     css(div2, {
-        'background-color': 'purple',
+        'background-color': '#b3aeada4',
+        'text-align': 'center',
+
     });
 
     css(foto, {
