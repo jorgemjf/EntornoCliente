@@ -2,10 +2,9 @@ function cargarFormulario() {
     //selecciono el div inicial del html para ir añadiendo elementos en el
     const divInicio = document.getElementById("divInicial")
 
-
     //creo un h1 para poner un titulo y lo añado al div inicial
     const titulo = document.createElement("h1")
-    const textoTitulo = document.createTextNode("FORMULARIO INGRESO")
+    const textoTitulo = document.createTextNode("FORMULARIO")
     titulo.appendChild(textoTitulo)
     divInicio.appendChild(titulo)
 
@@ -16,82 +15,11 @@ function cargarFormulario() {
     formulario.setAttribute("method", "post")
     divInicio.appendChild(formulario)
 
-    // Subtítulo para seccion del formulario
-    const camposTexto = document.createElement("h2")
-    const textoCamposPersonales = document.createTextNode("DATOS PERSONALES")
-    camposTexto.appendChild(textoCamposPersonales)
-    formulario.appendChild(camposTexto)
-
-    //label - Nombre
-    const labelCampo1 = document.createElement("label")
-    const textoLabelCampo1 = document.createTextNode("Nombre:")
-    labelCampo1.setAttribute("for", "Nombre")
-    labelCampo1.appendChild(textoLabelCampo1)
-    formulario.appendChild(labelCampo1)
-
-    //input - Nombre
-    const campoTextoInput1 = document.createElement("input")
-    campoTextoInput1.setAttribute("type", "text")
-    campoTextoInput1.setAttribute("id", "campoNombre")
-    campoTextoInput1.setAttribute("name", "campoTextoNombre")
-    formulario.appendChild(campoTextoInput1)
-
-    //label - Apellidos
-    const labelCampo2 = document.createElement("label")
-    const textoLabelCampo2 = document.createTextNode("Apellidos:")
-    labelCampo2.setAttribute("for", "Apellidos")
-    labelCampo2.appendChild(textoLabelCampo2)
-    formulario.appendChild(labelCampo2)
-
-    //input - Apellidos
-    const campoTextoInput2 = document.createElement("input")
-    campoTextoInput2.setAttribute("type", "text")
-    campoTextoInput2.setAttribute("id", "campoApellidos")
-    campoTextoInput2.setAttribute("name", "campoTextoApellidos")
-    formulario.appendChild(campoTextoInput2)
-
-
-    //label - DNI
-    const labelCampo3 = document.createElement("label")
-    const textoLabelCampo3 = document.createTextNode("DNI:")
-    labelCampo3.setAttribute("for", "DNI")
-    labelCampo3.appendChild(textoLabelCampo3)
-    formulario.appendChild(labelCampo3)
-
-    //input - DNI
-    const campoTextoInput3 = document.createElement("input")
-    campoTextoInput3.setAttribute("type", "text")
-    campoTextoInput3.setAttribute("id", "campoDNI")
-    campoTextoInput3.setAttribute("name", "campoTextoDNI")
-    formulario.appendChild(campoTextoInput3)
-
-    //label para Teléfono
-    const labelCampo4 = document.createElement("label")
-    const textoLabelCampo4 = document.createTextNode("Teléfono:")
-    labelCampo4.setAttribute("for", "Telefono")
-    labelCampo4.appendChild(textoLabelCampo4)
-    formulario.appendChild(labelCampo4)
-
-    //input Teléfono
-    const campoTextoInput4 = document.createElement("input")
-    campoTextoInput4.setAttribute("type", "text")
-    campoTextoInput4.setAttribute("id", "campoTelefono")
-    campoTextoInput4.setAttribute("name", "campoTextoTelefono")
-    formulario.appendChild(campoTextoInput4)
-
-    //label para Direccion
-    const labelCampo5 = document.createElement("label")
-    const textoLabelCampo5 = document.createTextNode("Direccion:")
-    labelCampo5.setAttribute("for", "Direccion")
-    labelCampo5.appendChild(textoLabelCampo5)
-    formulario.appendChild(labelCampo5)
-
-    //input Direccion
-    const campoTextoInput5 = document.createElement("input")
-    campoTextoInput5.setAttribute("type", "text")
-    campoTextoInput5.setAttribute("id", "campoDireccion")
-    campoTextoInput5.setAttribute("name", "campoTextoDireccion")
-    formulario.appendChild(campoTextoInput5)
+    //subtitulo para la entrada de datos personales
+    const radioButton = document.createElement("h2")
+    const textoRadioButton = document.createTextNode("Sección 1")
+    radioButton.appendChild(textoRadioButton)
+    formulario.appendChild(radioButton)
 
     //salto de linea
     const espacio = document.createElement("br")
@@ -99,55 +27,69 @@ function cargarFormulario() {
 
     //subtitulo para Opción 1
     const radioButton1 = document.createElement("h2")
-    const textoradioButton1 = document.createTextNode("Estado Civil:")
+    const textoradioButton1 = document.createTextNode("Radio Button 1")
     radioButton1.appendChild(textoradioButton1)
     formulario.appendChild(radioButton1)
 
     //label para opcion 1
     const labelOpcion1 = document.createElement("label")
-    const textoLabelOpcion1 = document.createTextNode("Casado")
-    labelOpcion1.setAttribute("for", "casado")
+    const textoLabelOpcion1 = document.createTextNode("Opcion 1")
+    labelOpcion1.setAttribute("for", "Opción 1")
     labelOpcion1.appendChild(textoLabelOpcion1)
     formulario.appendChild(labelOpcion1)
 
     //input Opcion 1
     const radioOpcion1 = document.createElement("input")
     radioOpcion1.setAttribute("type", "radio")
-    radioOpcion1.setAttribute("id", "casado")
+    radioOpcion1.setAttribute("id", "opcion1")
     radioOpcion1.setAttribute("name", "opcion")
-    radioOpcion1.setAttribute("value", "casado")
+    radioOpcion1.setAttribute("value", "Opcion 1")
     formulario.appendChild(radioOpcion1)
 
     //label para opcion 2
     const labelOpcion2 = document.createElement("label")
-    const textoLabelOpcion2 = document.createTextNode("Soltero")
-    labelOpcion2.setAttribute("for", "soltero")
+    const textoLabelOpcion2 = document.createTextNode("Opcion 2")
+    labelOpcion2.setAttribute("for", "Opción 2")
     labelOpcion2.appendChild(textoLabelOpcion2)
     formulario.appendChild(labelOpcion2)
 
     //input Opcion 2
     const radioOpcion2 = document.createElement("input")
     radioOpcion2.setAttribute("type", "radio")
-    radioOpcion2.setAttribute("id", "soltero")
+    radioOpcion2.setAttribute("id", "opcion2")
     radioOpcion2.setAttribute("name", "opcion")
-    radioOpcion2.setAttribute("value", "soltero")
+    radioOpcion2.setAttribute("value", "Opcion 2")
     formulario.appendChild(radioOpcion2)
 
     //label para opcion 3
     const labelOpcion3 = document.createElement("label")
-    const textoLabelOpcion3 = document.createTextNode("Viudo")
-    labelOpcion3.setAttribute("for", "viudo")
+    const textoLabelOpcion3 = document.createTextNode("Opcion 3")
+    labelOpcion3.setAttribute("for", "Opción 3")
     labelOpcion3.appendChild(textoLabelOpcion3)
     formulario.appendChild(labelOpcion3)
 
     //input Opcion 3
     const radioOpcion3 = document.createElement("input")
     radioOpcion3.setAttribute("type", "radio")
-    radioOpcion3.setAttribute("id", "viudo")
+    radioOpcion3.setAttribute("id", "opcion3")
     radioOpcion3.setAttribute("name", "opcion")
-    radioOpcion3.setAttribute("value", "viudo")
+    radioOpcion3.setAttribute("value", "Opcion 3")
     formulario.appendChild(radioOpcion3)
 
+    //label para opcion 4
+    const labelOpcion4 = document.createElement("label")
+    const textoLabelOpcion4 = document.createTextNode("Opcion 4")
+    labelOpcion4.setAttribute("for", "Opción 4")
+    labelOpcion4.appendChild(textoLabelOpcion4)
+    formulario.appendChild(labelOpcion4)
+
+    //input Opcion 4
+    const radioOpcion4 = document.createElement("input")
+    radioOpcion4.setAttribute("type", "radio")
+    radioOpcion4.setAttribute("id", "opcion4")
+    radioOpcion4.setAttribute("name", "opcion")
+    radioOpcion4.setAttribute("value", "Opcion 4")
+    formulario.appendChild(radioOpcion4)
 
     //salto de linea
     const espacio2 = document.createElement("br")
@@ -155,68 +97,68 @@ function cargarFormulario() {
 
     //subtitulo para Opción 1
     const radioButton2 = document.createElement("h2")
-    const textoradioButton2 = document.createTextNode("Plan a elegir:")
+    const textoradioButton2 = document.createTextNode("Radio Button 2")
     radioButton2.appendChild(textoradioButton2)
     formulario.appendChild(radioButton2)
 
     //label para opcion 5
     const labelOpcion5 = document.createElement("label")
-    const textoLabelOpcion5 = document.createTextNode("Semanal")
-    labelOpcion5.setAttribute("for", "Osemanal")
+    const textoLabelOpcion5 = document.createTextNode("Opcion 5")
+    labelOpcion5.setAttribute("for", "Opción 5")
     labelOpcion5.appendChild(textoLabelOpcion5)
     formulario.appendChild(labelOpcion5)
 
     //input Opcion 5
     const radioOpcion5 = document.createElement("input")
     radioOpcion5.setAttribute("type", "radio")
-    radioOpcion5.setAttribute("id", "semanal")
-    radioOpcion5.setAttribute("name", "plan")
-    radioOpcion5.setAttribute("value", "semanal")
+    radioOpcion5.setAttribute("id", "opcion5")
+    radioOpcion5.setAttribute("name", "opcion2")
+    radioOpcion5.setAttribute("value", "Opcion 5")
     formulario.appendChild(radioOpcion5)
 
     //label para opcion 6
     const labelOpcion6 = document.createElement("label")
-    const textoLabelOpcion6 = document.createTextNode("Mensual")
-    labelOpcion6.setAttribute("for", "mensual")
+    const textoLabelOpcion6 = document.createTextNode("Opcion 6")
+    labelOpcion6.setAttribute("for", "Opción 6")
     labelOpcion6.appendChild(textoLabelOpcion6)
     formulario.appendChild(labelOpcion6)
 
     //input Opcion 6
     const radioOpcion6 = document.createElement("input")
     radioOpcion6.setAttribute("type", "radio")
-    radioOpcion6.setAttribute("id", "mensual")
-    radioOpcion6.setAttribute("name", "plan")
-    radioOpcion6.setAttribute("value", "mensual")
+    radioOpcion6.setAttribute("id", "opcion6")
+    radioOpcion6.setAttribute("name", "opcion2")
+    radioOpcion6.setAttribute("value", "Opcion 6")
     formulario.appendChild(radioOpcion6)
 
     //label para opcion 7
     const labelOpcion7 = document.createElement("label")
-    const textoLabelOpcion7 = document.createTextNode("Trimestral")
-    labelOpcion7.setAttribute("for", "trimestral")
+    const textoLabelOpcion7 = document.createTextNode("Opcion 7")
+    labelOpcion7.setAttribute("for", "Opción 7")
     labelOpcion7.appendChild(textoLabelOpcion7)
     formulario.appendChild(labelOpcion7)
 
     //input Opcion 7
     const radioOpcion7 = document.createElement("input")
     radioOpcion7.setAttribute("type", "radio")
-    radioOpcion7.setAttribute("id", "trimestral")
-    radioOpcion7.setAttribute("name", "plan")
-    radioOpcion7.setAttribute("value", "trimestrañ")
+    radioOpcion7.setAttribute("id", "opcion7")
+    radioOpcion7.setAttribute("name", "opcion2")
+    radioOpcion7.setAttribute("value", "Opcion 7")
     formulario.appendChild(radioOpcion7)
 
     //label para opcion 8
     const labelOpcion8 = document.createElement("label")
-    const textoLabelOpcion8 = document.createTextNode("Anual")
-    labelOpcion8.setAttribute("for", "anual")
+    const textoLabelOpcion8 = document.createTextNode("Opcion 8")
+    labelOpcion8.setAttribute("for", "Opción 8")
     labelOpcion8.appendChild(textoLabelOpcion8)
     formulario.appendChild(labelOpcion8)
 
     //input Opcion 8
     const radioOpcion8 = document.createElement("input")
     radioOpcion8.setAttribute("type", "radio")
-    radioOpcion8.setAttribute("id", "anual")
-    radioOpcion8.setAttribute("name", "plan")
-    radioOpcion8.setAttribute("value", "anual")
+    radioOpcion8.setAttribute("id", "opcion8")
+    radioOpcion8.setAttribute("name", "opcion2")
+    radioOpcion8.setAttribute("value", "Opcion 8")
     formulario.appendChild(radioOpcion8)
 
     //salto de linea
@@ -228,42 +170,36 @@ function cargarFormulario() {
 
     //label para select
     const labelOpcion9 = document.createElement("label")
-    const textoLabelOpcion9 = document.createTextNode("Seleccione en que centro se quiere inscribir:")
-    labelOpcion9.setAttribute("for", "centro")
+    const textoLabelOpcion9 = document.createTextNode("Seleccione donde quiere reservar:")
+    labelOpcion9.setAttribute("for", "reservar")
     labelOpcion9.appendChild(textoLabelOpcion9)
     formulario.appendChild(labelOpcion9)
 
     //Select
-    let centro = document.createElement("select")
-    centro.name = "centro"
+    let reservar = document.createElement("select")
+    reservar.name = "reservar"
     let option1 = document.createElement("option")
-    option1.value = "gran_via"
+    option1.value = "Sala_Fitness"
     let option2 = document.createElement("option")
-    option2.value = "barrio_del_pilar"
+    option2.value = "Sauna"
     let option3 = document.createElement("option")
-    option2.value = "montecarmelo"
-    let option4 = document.createElement("option")
-    option4.value = "vallecas"
+    option2.value = "Piscina"
 
-    let text1 = document.createTextNode("Gran Vía")
-    let text2 = document.createTextNode("Barrio del Pîlar")
-    let text3 = document.createTextNode("Montecarmelo")
-    let text4 = document.createTextNode("Vallecas")
+    let text1 = document.createTextNode("Sala Fitness")
+    let text2 = document.createTextNode("Sauna")
+    let text3 = document.createTextNode("Piscina")
 
     option1.appendChild(text1)
     option2.appendChild(text2)
     option3.appendChild(text3)
-    option4.appendChild(text4)
 
-    centro.appendChild(option1)
-    centro.appendChild(option2)
-    centro.appendChild(option3)
-    centro.appendChild(option4)
-
+    reservar.appendChild(option1)
+    reservar.appendChild(option2)
+    reservar.appendChild(option3)
 
     let br = document.createElement("br")
     formulario.appendChild(br)
-    formulario.appendChild(centro)
+    formulario.appendChild(reservar)
 
     const espacio5 = document.createElement("br")
     formulario.appendChild(espacio5)
@@ -272,15 +208,15 @@ function cargarFormulario() {
 
     //Label para textarea
     const labelOpcion10 = document.createElement("label")
-    const textoLabelOpcion10 = document.createTextNode("Añada alguna observación:")
-    labelOpcion10.setAttribute("for", "observacion")
+    const textoLabelOpcion10 = document.createTextNode("Introduzca alguna sugerencia:")
+    labelOpcion10.setAttribute("for", "sugerencia")
     labelOpcion10.appendChild(textoLabelOpcion10)
     formulario.appendChild(labelOpcion10)
     const espacio7 = document.createElement("br")
     formulario.appendChild(espacio7)
     //TextArea
     let textarea = document.createElement("textarea")
-    textarea.name = "observacion"
+    textarea.name = "sugerencia"
     textarea.cols = "50"
     textarea.rows = "10"
     formulario.appendChild(textarea)
@@ -329,7 +265,7 @@ function cargarFormulario() {
     foto3.src = "imagenes/sala.jpg"
     foto3.alt = "foto de una bici"
     div2.appendChild(foto3)
-
+    
 
     function css(element, style) {
         for (const property in style)
@@ -337,39 +273,28 @@ function cargarFormulario() {
     }
 
     let styleForm = document.getElementById("formulario")
-    
-    css(body, {
-        'margin': '20px'
-    });
-    css(titulo, {
-        'text-align': 'center',
-        'border':'solid 3px #b3aeada4'
-    });
-    
     css(formulario, {
-        'background-color': '#b3aeada4',
-        'padding':'10px 10px 10px 10px'
+        'background-color': 'yellow',
+        'color': 'red'
     });
 
     css(div2, {
-        'background-color': '#b3aeada4',
-        'text-align': 'center',
-
+        'background-color': 'purple',
     });
 
     css(foto, {
         'height': '200px',
-        'width': "300px"
+        'width' : "300px"
     });
-
+    
     css(foto2, {
         'height': '200px',
-        'width': "300px"
+        'width' : "300px"
     });
-
+   
     css(foto3, {
         'height': '200px',
-        'width': "300px"
+        'width' : "300px"
     });
 
 }
