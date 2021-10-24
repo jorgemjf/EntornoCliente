@@ -238,8 +238,33 @@ function cargarFormulario() {
     validar.setAttribute("value", "Validar")
     formulario.appendChild(validar)
 
+    //Creamos un nuevo div
+    let div2 = document.createElement("div")
+    body.appendChild(div2)
 
+    let h1 = document.createElement("h1")
+    let texto = document.createTextNode("Nuestras instalaciones:")
+    h1.appendChild(texto)
+    div2.appendChild(h1)
 
+    //Añadimos las fotos
+    let foto = document.createElement("img");
+    foto.id = "sauna"
+    foto.src = "imagenes/sauna.jpg"
+    foto.alt = "foto de una sauna"
+    div2.appendChild(foto)
+
+    let foto2 = document.createElement("img");
+    foto2.id = "piscina"
+    foto2.src = "imagenes/piscina.jpg"
+    foto2.alt = "foto de una bici"
+    div2.appendChild(foto2)
+
+    let foto3 = document.createElement("img");
+    foto3.id = "sala"
+    foto3.src = "imagenes/sala.jpg"
+    foto3.alt = "foto de una bici"
+    div2.appendChild(foto3)
     
 
     function css(element, style) {
@@ -253,42 +278,25 @@ function cargarFormulario() {
         'color': 'red'
     });
 
+    css(div2, {
+        'background-color': 'purple',
+    });
+
+    css(foto, {
+        'height': '200px',
+        'width' : "300px"
+    });
+    
+    css(foto2, {
+        'height': '200px',
+        'width' : "300px"
+    });
+   
+    css(foto3, {
+        'height': '200px',
+        'width' : "300px"
+    });
 
 }
-function createRadio() {
-    var objDiv = document.getElementById("radioDiv");
 
-    var radioItem1 = document.createElement("input");
-    radioItem1.type = "radio";
-    radioItem1.name = "radioGrp";
-    radioItem1.id = "rad1";
-    radioItem1.value = "myradio1";
-
-    radioItem1.defaultChecked = true;
-    radioItem1.checked = true;
-
-    var radioItem2 = document.createElement("input");
-    radioItem2.type = "radio";
-    radioItem2.name = "radioGrp";
-    radioItem2.id = "rad2";
-    radioItem2.value = "myradio2";
-
-    var objTextNode1 = document.createTextNode("Radio1");
-    var objTextNode2 = document.createTextNode("Radio2");
-
-    var objLabel = document.createElement("label");
-    objLabel.htmlFor = radioItem1.id;
-    objLabel.appendChild(radioItem1);
-    objLabel.appendChild(objTextNode1);
-
-    var objLabel2 = document.createElement("label");
-    objLabel2.htmlFor = radioItem2.id;
-    objLabel2.appendChild(radioItem2);
-    objLabel2.appendChild(objTextNode2);
-
-
-    objDiv.appendChild(objLabel);
-    objDiv.appendChild(objLabel2);
-
-}
 
