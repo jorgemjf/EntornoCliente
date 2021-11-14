@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3.Formulario</title>
+    <link href="/css/raul.css" rel="stylesheet" type="text/css">
+    <script src="/js/raul.js"></script>
+</head>
+
+<body>
+    <div class="contenedorGeneral">
+        <h1 class="headerPrincipal">The Mother Pizza</h1>
+        <div class="contenedorFormulario">
+            <form id="formulario" action="" method="get">
+                <!-- Campo NOMBRE -->
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" class="inputTexto" name="nombre" placeholder="Ejemplo: Maria Castañeda">
+                <!-- Campo DIRECCIÓN -->
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" class="inputTexto" placeholder="Ejemplo: Bruno Abúndez, 48"><br>
+                <!-- Campo TELÉFONO -->
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono" name="telefono" class="inputTexto" placeholder="Ejemplo: 111.222.333"><br>
+                <!-- Campo EMAIL -->
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" class="inputTexto" placeholder="Ejemplo: mariacastañedo@gmail.com"><br>
+                <!-- Campo RADIO BUTTON - TAMAÑO PIZZA -->
+                <fieldset class="tamañoPizza">
+                    <legend>Seleccione tamaño de pizza:</legend>
+                    <input type="radio" id="pequeña" name="tamaño" value="5">
+                    <label for="pequeña">PEQUEÑA (5€)</label><br>
+                    <input type="radio" id="mediana" name="tamaño" value="10">
+                    <label for="mediana">MEDIANA (10€)</label><br>
+                    <input type="radio" id="grande" name="tamaño" value="15">
+                    <label for="grande">GRANDE (15€)</label><br>
+                </fieldset>
+                <!-- Campo CHECKBOX INGREDIENTES PIZZA -->
+                <fieldset class="ingredientesAdicionales">
+                    <legend>Ingredientes: </legend>
+                    <input type="checkbox" id="pollo" name="ingrediente" value="1">
+                    <label for="pollo">Pollo (+1€)</label><br>
+                    <input type="checkbox" id="pepperoni" name="ingrediente" value="1">
+                    <label for="pepperoni">Pepperoni (+1€)</label><br>
+                    <input type="checkbox" id="champiñones" name="ingrediente" value="1">
+                    <label for="champiñones">Champiñones (+1€)</label><br>
+                    <input type="checkbox" id="cebolla_caramelizada" name="ingrediente" value="1">
+                    <label for="cebolla-caramelizada">Cebolla Caramelizada (+1€)</label><br>
+                </fieldset>
+                <!-- Campo BOTÓN PROCESAR PEDIDO-->
+                <input type="submit" value="Procesar pedido">
+            </form>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
