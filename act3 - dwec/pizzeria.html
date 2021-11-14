@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Nunito:wght@200;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css">
+        <title> Pizza Delivery - Pedido Online </title>
+
+    </head>
+    <body>
+
+        <!-- Header -->
+
+        <header class="pizza-header">
+            <div class="header-section title">
+                <h3> Pizza Delivery - Envío a domicilio </h3>
+            </div>
+        </header>
+
+        <!-- Formulario -->
+
+        <form class="pizza-form">
+
+            <!-- Creación campo "Nombre". -->
+
+            <div class="text-field-set" id="campo-nombre">
+                <label for="name" class="text-label"> Nombre y apellido </label>
+                <input type="text" class="text-field error" name="nombre"
+                    id="nombre">
+                <span class="text-error"></span>
+            </div>
+
+            <!-- Creación campo "Dirección". -->
+
+            <div class="text-field-set" id="campo-direccion">
+                <label for="adress" class="text-label"> Dirección </label>
+                <input type="text" class="text-field error" name="direccion"
+                    id="direccion">
+                <span class="text-error"></span>
+            </div>
+
+            <!-- Creación campo "Teléfono". -->
+
+            <div class="text-field-set" id="campo-telefono">
+                <label for="phone" class="text-label">Teléfono de contacto
+                </label>
+                <input type="text" class="text-field error" name="telefono"
+                    id="telefono" placeholder="Ejemplo: 608456231">
+                <span class="text-error"></span>
+            </div>
+
+            <!-- Creación campo "Correo" -->
+
+            <div class="text-field-set" id="campo-correo">
+                <label for="email" class="text-label"> Email </label>
+                <input type="text" class="text-field error" name="correo"
+                    id="correo" placeholder="Ejemplo: myemail@gmail.com">
+                <span class="text-error"></span>
+            </div>
+
+            <!-- Creación radio button's "Tamaño Pizza" con sus variantes: Pequeña, Mediana y Grande. -->
+
+            <div class="options-sets">
+                <div class="option-field-set" id="campo-tamaño">
+                    <div class="field-set-title"> Tamaño </div>
+                    <div class="option-field">
+                        <input type="radio" class="radio-input" name="tamaño"
+                            id="small-size" value="Pequeña">
+                        <label class="option-label"> Pequeña </label>
+                    </div>
+                    <div class="option-field">
+                        <input type="radio" class="radio-input" name="tamaño"
+                            id="medium-size" value="Mediana">
+                        <label class="option-label"> Mediana </label>
+                    </div>
+                    <div class="option-field">
+                        <input type="radio" class="radio-input" name="tamaño"
+                            id="big-size" value="Grande">
+                        <label class="option-label"> Grande </label>
+                    </div>
+                    <div class="text-error"></div>
+                </div>
+
+                <!-- Creación checkbox's "Ingredientes" con sus posibilidades. -->
+
+                <div class="option-field-set" id="campo-ingredientes">
+                    <div class="field-set-title"> Ingredientes </div>
+                    <div class="option-field">
+                        <input type="checkbox" class="check-input"
+                            name="ingrediente" id="pollo" value="Pollo">
+                        <label class="option-label" for="pollo"> Pollo </label>
+                    </div>
+                    <div class="option-field">
+                        <input type="checkbox" class="check-input"
+                            name="ingrediente" id="bacon" value="Bacon">
+                        <label class="option-label" for="bacon"> Bacon </label>
+                    </div>
+                    <div class="option-field">
+                        <input type="checkbox" class="check-input"
+                            name="ingrediente" id="jamon" value="Jamon">
+                        <label class="option-label" for="jamon"> Jamón </label>
+                    </div>
+                    <div class="option-field">
+                        <input type="checkbox" class="check-input"
+                            name="ingrediente" id="tomate" value="Pimientos">
+                        <label class="option-label" for="tomate"> Mix de
+                            Pimientos </label>
+                    </div>
+                    <div class="text-error"></div>
+                </div>
+            </div>
+
+            <!-- Creación button's para "Reiniciar pedido" y "Procesar pedido"-->
+
+            <div class="buttons-set">
+                <button type="reset" class="btn secondary"> Reiniciar pedido
+                </button>
+                <button type="submit" disabled class="btn primary">Procesar
+                    pedido</button>
+            </div>
+        </form>
+
+        <!-- Creación factura -->
+
+        <div class="modal" tabindex="0">
+            <div class="bill-set">
+                <div class="bill-label">Pedido: </div>
+                <div class="bill-details">
+
+                    <!-- "Lx" lee las posiciones de tamaño y hasta los 4 ingredientes posibles seleccionables -->
+
+                    <div class="bill-line" id="L0">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                    <div class="bill-line" id="L1">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                    <div class="bill-line" id="L2">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                    <div class="bill-line" id="L3">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                    <div class="bill-line" id="L4">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                    <div class="bill-line" id="L5">
+                        <div class="factura-descripcion"></div>
+                        <div class="factura-precio"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creación button's en la factura "Seguir comprando" para volver atrás respetando lo seleccionado anteriormente en el formulario, o "Confirmar pedido para finalizar"-->
+            
+            <div class="buttons-set">
+                <button type="reset" class="btn secondary">Seguir comprando</button>
+                <button type="submit" class="btn primary">Confirmar pedido</button>
+            </div>
+        </div>
+
+        <!-- Enlazado del archivo "JS" -->
+
+        <script type="text/javascript" src="pizzeria.js"></script>
+    </body>
+
+    <!-- Footer con la "base legal" -->
+
+    <footer>
+        <h6><i> En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios
+                de la sociedad de la información y de comercio electrónico, se
+                informa que los Datos identificativos del responsable titular
+                del portal son los siguientes:
+
+                DENOMINACIÓN SOCIAL: FOOD DELIVERY BRANDS, S.A.
+                CIF: A-78849676
+                DOMICILIO SOCIAL: C/ISLA GRACIOSA, Nº 7, SAN SEBASTIAN DE LOS
+                REYES (MADRID)
+                REGISTRO MERCANTIL DE MADRID: TOMO 8686 GENERAL 7552, DE LA
+                SECCIÓN 8ª DEL LIBRO DE SOCIEDADES, FOLIO 9, HOJA Nº 81671-2,
+                INSCRIPCIÓN 1ª[b]
+                A efectos aclaratorios FOOD DELIVERY BRANDS, S.A. quedará
+                identificada en todo el documento como FOOD DELIVERY BRANDS,
+                S.A. </h6></p>
+    </footer>
+</html>
