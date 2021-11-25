@@ -1,0 +1,15 @@
+{
+  "PIZZERIA": {
+    "PIZZA": [
+      { "SIZE": "Pequeña", "PRECIO": 5 },
+      { "SIZE": "Mediana", "PRECIO": 10 },
+      { "SIZE": "Grande", "PRECIO": 15 }
+    ],
+    "INGREDIENTES": [
+      { "OPCION": "Pollo", "PRECIO": 3 },
+      { "OPCION": "Bacon", "PRECIO": 5 },
+      { "OPCION": "Cebolla caramelizada", "PRECIO": 2 },
+      { "OPCION": "Champiñones", "PRECIO": 4 }
+    ]
+  }
+}
