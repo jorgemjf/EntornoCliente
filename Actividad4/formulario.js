@@ -202,43 +202,6 @@ function cargarFormulario(jsonDoc) {
 }
 
 //función que se ejecuta al cargar la página
-window.onload = function () {
-    CarcarAjax();
-    //formulario.onsubmit = validacion;
-    //let formulario = document.getElementById("formulario");
-    /* let submit = document.getElementById("enviar");
-    submit.addEventListener("click", function (event) {
-        event.preventDefault();
-        validacion();
-        //precioPizza(errorCount);
-    });
-
-    var totalPedido = totalRadioButton + totalCheckbox;
-    alert("El total pedido es de: " + (totalPedido));
-
-
-    // Función que calcula el precio total del pedido
-      let contadorPrecio = 0;
-     let precioPizza = function (errorCount) {
-         if (errorCount != 0) {
-             let size = document.querySelector('input[name="size"]:checked').value;
-             //console.log(size);
-             contadorPrecio += parseInt(size);
-             let ingredient = document.querySelectorAll('input[type="checkbox"]:checked').length;
-             let ingre = document.querySelectorAll('input[type="checkbox"]:checked');
-             result = [];
-             ingre.forEach(element => {
-                 result.push(element.value);
-             });
- 
-             console.log(result);
-             contadorPrecio += parseInt(ingredient);
-             console.log(contadorPrecio);
-             alert("El precio total de tu pedido es de " + contadorPrecio + "€");
-         }
-     }  */
-
-
-
-
-}
+// window.onload = function () {
+//     CarcarAjax();
+// }

@@ -118,7 +118,7 @@ body {
     background-color: black;
   }
 
-  #botonActualizar {
+  #botonActualizar, #enviarFormulario {
     height: 50px;
     width: 150px;
     font-weight: 600;
