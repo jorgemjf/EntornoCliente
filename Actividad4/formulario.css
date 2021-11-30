@@ -100,7 +100,7 @@ input[type="text"]:focus {
   padding-top: 5%;
 }
 
-input[type="submit"] , #calcular{
+input[type="submit"] {
   margin-top: 2%;
   margin-left: 37%;
   border: 1px black;

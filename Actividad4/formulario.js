@@ -202,6 +202,7 @@ function cargarFormulario(jsonDoc) {
 }
 
 //función que se ejecuta al cargar la página
-// window.onload = function () {
-//     CarcarAjax();
-// }
+window.onload = function () {
+    CarcarAjax();
+
+}
