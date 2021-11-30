@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4.AJAX</title>
+    <link href="formularioJQuery.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Actividad4/JQUERY/js/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript"src="formularioJQuery.js"></script>
+</head>
+
+<body>
+    <div class="contenedorGeneral">
+        <h1 class="headerPrincipal">The Mother Pizza</h1>
+        <div class="contenedorFormulario">
+            <form id="formulario" action="" method="get">
+                <!-- Campo NOMBRE -->
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" class="inputTexto" name="nombre" placeholder="Ejemplo: Maria Castañeda">
+                <!-- Campo DIRECCIÓN -->
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" class="inputTexto"
+                    placeholder="Ejemplo: Bruno Abúndez, 48"><br>
+                <!-- Campo TELÉFONO -->
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono" name="telefono" class="inputTexto"
+                    placeholder="Ejemplo: 111.222.333"><br>
+                <!-- Campo EMAIL -->
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" class="inputTexto"
+                    placeholder="Ejemplo: mariacastañedo@gmail.com"><br>
+                <!-- Campo RADIO BUTTON - TAMAÑO PIZZA -->
+                <fieldset class="tamañoPizza">
+                <legend>Seleccione tamaño de pizza:</legend>
+                    <!-- AQUI se añaden los radiobutton -->
+                    <div id="resultadoTamanos">  
+                    </div>
+                </fieldset>
+                <!-- Campo CHECKBOX INGREDIENTES PIZZA -->
+                <fieldset class="ingredientesAdicionales">
+                <legend>Ingredientes: </legend>
+                <!-- AQUI se añaden los checkbox -->
+                    <div id="resultadoIngredientes">
+                    </div>
+                </fieldset>
+                <!-- Campo BOTÓN PROCESAR PEDIDO-->
+                <input type="button" id="enviarFormulario" value="Enviar" onclick="calcularPrecio()">
+            </form>
+        </div>
+    <button id="botonActualizar">Crear elementos</button>    
+    </div>
+    <footer></footer>
+</body>
+
+</html>
