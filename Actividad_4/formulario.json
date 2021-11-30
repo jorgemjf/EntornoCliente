@@ -1,0 +1,31 @@
+{ 
+  "Pizzas": {
+    "Tamanos": [
+      {"Tamano": "Pequeña",
+        "Precio": 5
+      },
+      {"Tamano":"Mediana",
+        "Precio": 10
+      },
+      {"Tamano":"Grande",
+        "Precio": 15
+      }
+    ],
+
+    "Ingredientes": [
+      {"Ingrediente": "Pollo",
+        "Precio": 3
+      },
+      {"Ingrediente":"Bacon",
+        "Precio": 3
+      },
+      {"Ingrediente":"Cebolla caramelizada",
+        "Precio": 2
+      },
+      {"Ingrediente":"Champiñones",
+        "Precio": 2
+      }
+    ]
+
+   }
+}
